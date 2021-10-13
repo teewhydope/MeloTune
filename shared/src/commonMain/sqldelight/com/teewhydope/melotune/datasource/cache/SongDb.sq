@@ -1,0 +1,46 @@
+CREATE TABLE  song_Entity(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    uri TEXT NOT NULL,
+    albumArt TEXT NOT NULL,
+    displayName TEXT NOT NULL,
+    artist TEXT NOT NULL,
+    title TEXT NOT NULL,
+    duration INTEGER NOT NULL,
+    size INTEGER NOT NULL,
+    data TEXT NOT NULL,
+    dateAdded REAL NOT NULL
+);
+
+selectAll:
+SELECT *
+FROM song_Entity;
+
+insertSong:
+INSERT OR REPLACE
+INTO song_Entity (
+    id,
+    uri,
+    albumArt,
+    displayName,
+    artist,
+    title,
+    duration,
+    size,
+    data,
+    dateAdded
+) VALUES (
+?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+searchSongs:
+SELECT * FROM song_Entity
+WHERE displayName LIKE ('%' || :query || '%')
+OR artist LIKE ('%' || :query || '%')
+ORDER BY dateAdded DESC;
+
+getAllSongs:
+SELECT * FROM song_Entity
+ORDER BY dateAdded;
+
+getSongById:
+SELECT * FROM song_Entity
+WHERE id = :id;
