@@ -1,5 +1,10 @@
 # MeloTune
-    Android Specific Components: Jetpack Compose, Coil, Hilt, Accompanist Plugins, Exoplayer2
+    Android Specific Components: Jetpack Compose, Coil, Hilt, 
+    Accompanist Plugins, Exoplayer2
+    
     Shared: Ktor, SQL Delight
+    
     iOS Specific Components: SwiftUI
+    
+    <img src="https://github.com/teewhydope/MeloTune/blob/master/art/WhatsApp%20Image%202021-10-19%20at%2012.02.55%20PM%20(1).jpeg" width="200" height="400"> <img src="https://github.com/teewhydope/MeloTune/blob/master/art/WhatsApp%20Image%202021-10-19%20at%2012.02.55%20PM.jpeg" width="200" height="400">  
 
