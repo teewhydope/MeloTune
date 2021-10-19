@@ -91,34 +91,30 @@ fun AppHome(
                         }
                     ) {
                         when (tabStatus.value) {
-                            0 -> {
-                                DropdownMenuItem(onClick = { /*Handle New group*/ }) {
-                                    Text(text = "New group")
+                            0, 1, 2, 3, 4 -> {
+                                DropdownMenuItem(onClick = { /*Handle Shuffle All*/ }) {
+                                    Text(text = "Shuffle All")
                                 }
-                                DropdownMenuItem(onClick = { /*Handle New broadcast*/ }) {
-                                    Text(text = "New broadcast")
+                                if(tabStatus.value == 1){
+                                    DropdownMenuItem(onClick = { /*Handle Sort by*/ }) {
+                                        Text(text = "View as")
+                                    }
                                 }
-                                DropdownMenuItem(onClick = { /*Handle Linked devices*/ }) {
-                                    Text(text = "Linked devices")
+                                DropdownMenuItem(onClick = { /*Handle Sort by*/ }) {
+                                    Text(text = "Sort by")
                                 }
-                                DropdownMenuItem(onClick = { /*Handle Starred messages*/ }) {
-                                    Text(text = "Starred messages")
-                                }
-                                DropdownMenuItem(onClick = { /*Handle Payments*/ }) {
-                                    Text(text = "Payments")
-                                }
-                                DropdownMenuItem(onClick = { /*Handle Settings*/ }) {
-                                    Text(text = "Settings")
-                                }
-                            }
-                            1 -> {
-                                DropdownMenuItem(onClick = { /*Handle Status privacy*/ }) {
-                                    Text(text = "Status privacy")
+                                DropdownMenuItem(onClick = { /*Handle Equalizer*/ }) {
+                                    Text(text = "Equalizer")
                                 }
                                 DropdownMenuItem(onClick = { /*Handle Settings*/ }) {
                                     Text(text = "Settings")
                                 }
+                                DropdownMenuItem(onClick = { /*Handle About*/ }) {
+                                    Text(text = "About")
+                                }
+
                             }
+
                             2 -> {
                                 DropdownMenuItem(onClick = { /*Handle Clear call log*/ }) {
                                     Text(text = "Clear call log")

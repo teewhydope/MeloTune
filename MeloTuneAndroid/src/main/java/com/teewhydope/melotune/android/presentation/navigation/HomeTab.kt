@@ -54,7 +54,7 @@ fun HomeTab(
 @ExperimentalPagerApi
 @Composable
 fun Tab(pagerState: PagerState) {
-    val list = listOf("Home", "Albums", "Artists", "Playlists", "Favorites")
+    val list = listOf("Songs", "Albums", "Artists", "Playlists", "Favorites")
     val scope = rememberCoroutineScope()
     _tabCurrentStatus.value = pagerState.currentPage
 
@@ -64,7 +64,7 @@ fun Tab(pagerState: PagerState) {
         contentColor = Color.Gray,
         indicator = { tabPositions ->
             TabRowDefaults.Indicator(
-                modifier = Modifier.tabIndicatorOffset(tabPositions[pagerState.targetPage]),
+                modifier = Modifier.tabIndicatorOffset(tabPositions[pagerState.currentPage]),
                 height = 3.dp,
                 color = Color.White
             )
